@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <!-- HTML -->
+</head>
+<h2>Hol <i class="fa-brands fa-wolf-pack-battalion"></i> day</h2>
+<body>
+  <div class="container">
+    <div class="tabs">
+      <h3 class="active">Video</h3>
+      <h3>Thumbnail</h3>
+    </div>
+    <div class="tab-content">
+      <div class="active">
+        <h1>YouTube Video Music Video Downloader</h1>
+                <center><img src="wollf.jpg" width="128" height="128"></center>
+        <p>Download videos, shorts , playlists from YouTube quickly and easily in HD quality</p>
+        <input type="text" class="link" placeholder="https://youtu.be/a-FX981WxOY?si=OqZ9oJhN-WgjCu10" />
+        <button class="btn" onclick="video()"><i class="fa-brands fa-wolf-pack-battalion"></i> Generated <i class="fa-brands fa-wolf-pack-battalion"></i></button>
+      </div>
+  
+      <div>
+        <h1>YouTube Video Thumbnail Downloader</h1>
+        <center><img src="wollf.jpg" width="128" height="128"></center>
+        <p>Download thumbnails from YouTube videos in HD and in JPG, PNG, or WEBP format</p>
+  
+        <input type="text" class="link" placeholder="https://youtu.be/a-FX981WxOY?si=OqZ9oJhN-WgjCu10" />
+  
+        <button class="btn" onclick="video()"><i class="fa-brands fa-wolf-pack-battalion"></i> Generated <i class="fa-brands fa-wolf-pack-battalion"></i></button>
+      </div>
+    </div>
+    <script>
+      swal({
+  title: "attention?",
+  text: "This application is used to download YouTube videos, music and thumbnails You cannot use other links besides the YouTube link!",
+  icon: "warning",
+  buttons: true,
+  dangerMode: true,
+})
+.then((willDelete) => {
+  if (willDelete) {
+    swal("Thank you, if you understand what we are saying, we hope it can help you with other interesting YouTube videos👍", {
+      icon: "success",
+    });
+  } else {
+    swal("Remember, this application is used to paste YouTube links for download, not for anything else besides that!!!");
+  }
+});
+    </script>
+  </div>
+  <style>
+    *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-image: url('wolf2.gif');
+}
+.container {
+  width: 80vmin;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  border-radius: 20px;
+  top: 120px;
+  background: crimson;
+  box-shadow: 10px 10px 20px crimson;
+}
+img{
+  border-radius: 20px;
+}
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+h2{
+  font-size: 30px;
+  left: 32%;
+  top: 5px;
+  position: absolute;
+  color: #ffffff;
+}
+h3 {
+  background-color: crimson;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 20px;
+  cursor: none;
+  font-weight: 600;
+  margin-left: 60px;
+  color: #000;
+}
+.tab-content {
+  background-color: #000;
+  padding: 50px 40px;
+  border-radius: 20px;
+}
+.tab-content h4 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #000224;
+  font-weight: 600;
+}
+.tab-content p {
+  text-align: justify;
+  line-height: 1.9;
+  letter-spacing: 0.4px;
+  color: #202238;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.tab-content div {
+  display: none;
+}
+.tab-content .active {
+  display: block;
+}
+.tabs .active {
+  background-color: #ffffff;
+  color: #FFC801;
+}
+h1{
+  text-align: center;
+  font-size: 20px;
+  color: #FFC801;
+}
+.link{
+    width: 99%;
+    height: 45px;
+    margin-top: 15px;
+    text-align: center;
+    border: 2px solid crimson;
+    border-radius: 15px;
+}
+.btn {
+  position: absolute;
+  bottom: -15px;
+  left: 17%;
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('wolf2.gif');
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+  </style>
+  <!-- Project -->
+  <script>
+    let tabs = document.querySelectorAll(".tabs h3");
+let tabContents = document.querySelectorAll(".tab-content div");
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    tabContents.forEach((content) => {
+      content.classList.remove("active");
+    });
+    tabs.forEach((tab) => {
+      tab.classList.remove("active");
+    });
+    tabContents[index].classList.add("active");
+    tabs[index].classList.add("active");
+  });
+});
+
+var link = document.querySelector('.link');
+// video download button function 
+function video() {
+  if (link.value != "") {
+    if (link.value.indexOf("https://youtu.be/") != -1)
+    {
+
+      var YTurl = link.value.replace("https://youtu.be/", "https://www.000tube.com/watch?v=");
+
+      window.open(YTurl, '_bhank');
+    }
+    else {
+
+      var YTurl = link.value.replace("you", "000");
+
+      window.open(YTurl, '_bhank');
+    }
+  }
+}
+  </script>
+</body>
+</html>
